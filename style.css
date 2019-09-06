@@ -1,0 +1,24 @@
+.md-result {
+    background-color:green;
+    color: #ffffff;
+}
+.md-failed {
+    background-color:red;
+    color: #ffffff;
+}
+.md-passed {
+    background-color: green;
+    color: #ffffff;
+}
+.md-white {
+    color: #ffffff;
+}
+.md-fab md-icon {
+    padding: 15px 0px;
+}
+.text-center {
+    text-align: center;
+}
+.md-fab-bottom-right, .md-fab-bottom-left{
+    position: fixed !important;
+}
