@@ -2,7 +2,6 @@ angular.module('ILIGCapp', ['ngMaterial', 'ngMessages'])
 
   .controller('gradeController', ['$scope', function ($scope) {
     $scope.calc = function () {
-
        // $scope.reading = $scope.rd * 4;
       $scope.sparray = (new Function("return [" + $scope.sp+ "];")());
       $scope.spsum = $scope.sparray.reduce((a, b) => a + b, 0);
@@ -30,6 +29,12 @@ angular.module('ILIGCapp', ['ngMaterial', 'ngMessages'])
       $scope.allaverage = $scope.speaking + $scope.reading + $scope.writing;
       $scope.finalgrade = Number($scope.allaverage / 8).toFixed(2);
       console.log($scope.finalgrade);
+    }
+
+    $scope.reset = function () {
+      $scope.sp = '';
+      $scope.rd = '';
+      $scope.wr = '';
     }
 
   }])
