@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Grade Calculator | ILI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title">
+</head>
+
+<body ng-app="ILIGCapp">
+    <md-toolbar layout="row" layout-align="space-between none">
+        <div class="md-toolbar-tools">
+            <h2 layout="row">ILI Grade Calculator | Summer 98</h2>
+        </div>
+    </md-toolbar>
+    <div class="md-padding" layout-xs="column" layout="row" ng-controller="gradeController">
+        <div layout="column">
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">
+                            <md-icon>record_voice_over</md-icon> Speaking Grades
+                        </span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <div layout="row">
+                    <md-input-container class="md-block"  md-no-float flex>
+                        <label>#1</label>
+                        <input ng-model='sp1' type="number">
+                    </md-input-container>
+                    <md-input-container class="md-block"  md-no-float flex>
+                        <label>#2</label>
+                        <input ng-model='sp2' type="number">
+                    </md-input-container>
+                </div>
+                <div layout="row">
+                        <md-input-container class="md-block"  md-no-float flex>
+                            <label>#3</label>
+                            <input ng-model='sp3' type="number">
+                        </md-input-container>
+                        <md-input-container class="md-block"  md-no-float flex>
+                            <label>#4</label>
+                            <input ng-model='sp4' type="number">
+                        </md-input-container>
+                    </div>
+                </md-card-content>
+            </md-card>
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">
+                            <md-icon>menu_book</md-icon> Reading Grades
+                        </span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content layout="column">
+                        <div layout="row">
+                                <md-input-container class="md-block"  md-no-float flex>
+                                    <label>#1</label>
+                                    <input ng-model='r1' type="number">
+                                </md-input-container>
+                                <md-input-container class="md-block"  md-no-float flex>
+                                    <label>#2</label>
+                                    <input ng-model='r2' type="number">
+                                </md-input-container>
+                            </div>
+                            <div layout="row">
+                                    <md-input-container class="md-block"  md-no-float flex>
+                                        <label>#3</label>
+                                        <input ng-model='r3' type="number">
+                                    </md-input-container>
+                                    <md-input-container class="md-block"  md-no-float flex>
+                                        <label>#4</label>
+                                        <input ng-model='r4' type="number">
+                                    </md-input-container>
+                                </div>
+                </md-card-content>
+            </md-card>
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">
+                            <md-icon>edit</md-icon> Writing Grades
+                        </span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content layout="column">
+                        <div layout="row">
+                                <md-input-container class="md-block"  md-no-float flex>
+                                    <label>#1</label>
+                                    <input ng-model='wr1' type="number">
+                                </md-input-container>
+                                <md-input-container class="md-block"  md-no-float flex>
+                                    <label>#2</label>
+                                    <input ng-model='wr2' type="number">
+                                </md-input-container>
+                            </div>
+                            <div layout="row">
+                                    <md-input-container class="md-block"  md-no-float flex>
+                                        <label>#3</label>
+                                        <input ng-model='wr3' type="number">
+                                    </md-input-container>
+                                    <md-input-container class="md-block"  md-no-float flex>
+                                        <label>#4</label>
+                                        <input ng-model='wr4' type="number">
+                                    </md-input-container>
+                                </div>
+                                <div layout="row">
+                                        <md-input-container class="md-block"  md-no-float flex>
+                                            <label>#5</label>
+                                            <input ng-model='wr5' type="number">
+                                        </md-input-container>
+                                    </div>
+                </md-card-content>
+            </md-card>
+            <md-card class="md-accent">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline md-result">
+                            <md-icon class="md-result">check_circle</md-icon> Class Grade : 30
+                        </span>
+                    </md-card-title-text>
+                </md-card-title>
+            </md-card>
+            <md-button class="md-raised md-primary" ng-click="calc()">
+                <md-icon>check</md-icon> Calculate
+            </md-button>
+            <md-button class="md-raised md-accent" ng-click="calc()">
+                <md-icon>arrow_forward</md-icon> Next
+            </md-button>
+        </div>
+    </div>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+    <!-- App scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
