@@ -31,7 +31,7 @@ angular.module('ILIGCapp', ['ngMaterial', 'ngMessages'])
       console.log($scope.finalgrade);
       $mdToast.show(
         $mdToast.simple()
-          .textContent('Class Grade:' + $scope.finalgrade)
+          .textContent('Class Grade: ' + $scope.finalgrade)
           .position("top right")
           .theme('success-toast')
           .hideDelay(7000)
