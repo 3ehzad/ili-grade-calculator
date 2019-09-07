@@ -32,7 +32,7 @@
                 <md-card-content layout="row">
                     <md-input-container class="md-block" md-no-float flex>
                         <label>Grade1,Grade2,Grade3,...</label>
-                        <input ng-model='sp' name="sp" type="text" nputmode="numeric" pattern="[0-9]*" required>
+                        <input ng-model='sp' name="sp" type="text" nputmode="numeric" pattern="/^[0-9.,]+$/" required>
                         <div ng-messages="gradeForm.sp.$error">
                             <div ng-message="required">Speaking's grade is required!</div>
                         </div>
