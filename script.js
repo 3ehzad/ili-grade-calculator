@@ -1,6 +1,6 @@
 angular.module('ILIGCapp', ['ngMaterial', 'ngMessages'])
 
-  .controller('gradeController', ['$scope', function ($scope) {
+  .controller('gradeController', ['$scope', '$mdToast', function ($scope, $mdToast) {
     $scope.calc = function () {
        // $scope.reading = $scope.rd * 4;
       $scope.sparray = (new Function("return [" + $scope.sp+ "];")());
@@ -29,6 +29,13 @@ angular.module('ILIGCapp', ['ngMaterial', 'ngMessages'])
       $scope.allaverage = $scope.speaking + $scope.reading + $scope.writing;
       $scope.finalgrade = Number($scope.allaverage / 8).toFixed(2);
       console.log($scope.finalgrade);
+      $mdToast.show(
+        $mdToast.simple()
+          .textContent('Class Grade:' + $scope.finalgrade)
+          .position("top right")
+          .theme('success-toast')
+          .hideDelay(7000)
+      );
     }
 
     $scope.reset = function () {

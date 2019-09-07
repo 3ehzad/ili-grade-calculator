@@ -22,3 +22,6 @@
 .md-fab-bottom-right, .md-fab-bottom-left{
     position: fixed !important;
 }
+md-toast.md-success-toast-theme .md-toast-content {
+    background-color:green;
+}
