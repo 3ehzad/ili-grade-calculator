@@ -21,17 +21,21 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 
-<body ng-app="ILIGCapp">
-    <md-toolbar layout="row" layout-align="space-between center">
+<body ng-app="ILIGCapp" ng-controller="gradeController">
+    <md-toolbar layout="row" layout-align="space-between center" ng-controller="headController">
         <div class="md-toolbar-tools">
             <h2 layout="row" flex>ILI Grade Calculator</h2>
             <md-button aria-label="Reset" ng-click="reset()">
                     <md-tooltip md-direction="bottom=">Reset</md-tooltip>
                     <md-icon>refresh</md-icon>
             </md-button>
+            <md-button class="md-icon-button" aria-label="Help" ng-click="help(ev)">
+                    <md-tooltip md-direction="bottom=">Help</md-tooltip>
+                    <md-icon>help</md-icon>
+            </md-button>
         </div>
     </md-toolbar>
-    <div class="md-padding" layout-xs="column" ng-controller="gradeController">
+    <div class="md-padding" layout-xs="column">
         <form name="gradeForm">
                 <md-card class="md-passed">
                         <md-card-title>
