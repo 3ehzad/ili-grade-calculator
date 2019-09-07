@@ -22,9 +22,13 @@
 </head>
 
 <body ng-app="ILIGCapp">
-    <md-toolbar layout="row" layout-align="space-between none">
+    <md-toolbar layout="row" layout-align="space-between center">
         <div class="md-toolbar-tools">
-            <h2 layout="row">ILI Grade Calculator [Summer98]</h2>
+            <h2 layout="row" flex>ILI Grade Calculator</h2>
+            <md-button aria-label="Reset" ng-click="reset()">
+                    <md-tooltip md-direction="bottom=">Reset</md-tooltip>
+                    <md-icon>refresh</md-icon>
+            </md-button>
         </div>
     </md-toolbar>
     <div class="md-padding" layout-xs="column" ng-controller="gradeController">
@@ -94,10 +98,8 @@
             </md-card>
         </form>
         <md-button class="md-fab md-fab-bottom-right" aria-label="Calculator" href="#" ng-click="gradeForm.$valid && calc()">
+                <md-tooltip md-direction="top">Calculate</md-tooltip>
             <md-icon>check</md-icon>
-        </md-button>
-        <md-button class="md-fab md-fab-top-right" aria-label="Reset" href="#" ng-click="reset()">
-            <md-icon>refresh</md-icon>
         </md-button>
     </div>
     <!-- Angular Material requires Angular.js Libraries -->
