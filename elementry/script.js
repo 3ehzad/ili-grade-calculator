@@ -46,6 +46,8 @@ angular.module('ILIGCapp', ['ngMaterial', 'ngMessages'])
       $scope.sp = '';
       $scope.rd = '';
       $scope.wr = '';
+      $scope.wb = '';
+      $scope.ln = '';
     }
   }])
     .controller('headController', ['$scope', '$mdDialog', function ($scope, $mdDialog) {
