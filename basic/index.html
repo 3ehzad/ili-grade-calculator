@@ -24,7 +24,10 @@
 <body ng-app="ILIGCapp" ng-controller="gradeController">
     <md-toolbar layout="row" layout-align="space-between center" ng-controller="headController">
         <div class="md-toolbar-tools">
-            <h2 layout="row" flex>ILI Grade Calculator</h2>
+            <md-button class="md-icon-button" ng-href="/">
+                <md-icon>home</md-icon>
+        </md-button>
+            <h2 layout="row" flex>Basic Calculator</h2>
             <md-button aria-label="Reset" ng-click="reset()">
                     <md-tooltip md-direction="bottom=">Reset</md-tooltip>
                     <md-icon>refresh</md-icon>
