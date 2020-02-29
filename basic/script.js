@@ -36,7 +36,7 @@ angular.module('ILIGCapp', ['ngMaterial', 'ngMessages'])
     $scope.help = function (ev) {
       $mdDialog.show({
         controller: diagController,
-        templateUrl: 'help.tmpl.html',
+        templateUrl: '../help.tmpl.html',
         parent: angular.element(document.querySelector('#popupContainer')),
         targetEvent: ev,
         clickOutsideToClose: true,
